@@ -49,7 +49,7 @@ handleFilterContacts = event =>{
    }
    getFilterContacts = () =>{
      const { contacts,filter } = this.state;
-    const normalizeFilter =filter.toLocaleLowerCase();
+    const normalizeFilter = filter.toLocaleLowerCase();
 
     return contacts.filter(contact =>contact.name.toLocaleLowerCase().includes(normalizeFilter))
    }
@@ -62,7 +62,7 @@ handleFilterContacts = event =>{
           <ContactForm onSubmit={this.handleContactAdd}/>
           <h2>Contacts</h2>
           {contacts.length > 1 && <Filter value={filter} change={this.handleFilterContacts}/>}
-          {contacts.length > 0 ? <PhoneList list ={filterContacts} onDelete={this.handleContactDelete}/> : <p>You are dont have a contact</p>}
+          {contacts.length > 0 ? <PhoneList list ={filterContacts} onDelete={this.handleContactDelete}/> : <p>You are don*t have a contact</p>}
            </div>
          )
     }
