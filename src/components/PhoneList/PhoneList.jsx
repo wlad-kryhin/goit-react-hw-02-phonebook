@@ -1,5 +1,3 @@
-
-import React from 'react'
 export  default function PhoneList({list,onDelete}) {
   return(  <ul>
  {list.map(({ id, name, tel}) =>{

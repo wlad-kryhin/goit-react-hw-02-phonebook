@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import React, { Component } from "react";
+import { Component } from "react";
 import PhoneList from "./components/PhoneList/PhoneList";
 import ContactForm from "./components/ContactForm/ContactForm"
 import Filter from './components/Filter/Filter';
