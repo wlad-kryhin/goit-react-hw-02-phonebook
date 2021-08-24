@@ -1,24 +1,29 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import s from './ContactForm.module.css';
+
+const BASE_STATE = {
+  name: '',
+  tel: '',
+};
 export default class ContactForm extends Component {
   state = {
-    name: '',
-    tel: '',
+    ...BASE_STATE,
   };
   handleInputChange = event => {
     const { name, value } = event.currentTarget;
     this.setState({ [name]: value });
   };
+  resetState = () => {
+    this.setState({ ...BASE_STATE });
+  };
 
   handleFormSubmit = event => {
     event.preventDefault();
-
     this.props.onSubmit(this.state);
+    this.resetState();
   };
-  resetState() {
-    this.setState({ name: '', tel: '' });
-  }
+
   render() {
     return (
       <form onSubmit={this.handleFormSubmit} className={s.form}>

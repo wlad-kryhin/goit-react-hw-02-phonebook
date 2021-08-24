@@ -18,5 +18,5 @@ export default function Filter({ value, change }) {
 
 Filter.propTypes = {
   value: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 };

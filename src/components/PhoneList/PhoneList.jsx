@@ -23,6 +23,6 @@ export default function PhoneList({ list, onDelete }) {
   );
 }
 PhoneList.propTypes = {
-  list: PropTypes.object,
+  list: PropTypes.array,
   onDelete: PropTypes.func.isRequired,
 };
